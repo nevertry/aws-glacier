@@ -7,9 +7,9 @@ $dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
 
 // load: Greet
-$greet = new App\Playground\Sample\Greet();
-$greet->hello();
+// $greet = new App\Playground\Sample\Greet();
+// $greet->hello();
 
 // run
-echo rootdir();
-echo getenv('AWS_REGION');
+// echo getenv('AWS_REGION');
+echo base_path('config/aws.php');

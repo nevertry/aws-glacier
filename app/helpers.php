@@ -1,11 +1,9 @@
 <?php
 
-function appdir()
+function base_path($path='')
 {
-    return dirname(__FILE__);
+    $base_dir = dirname(__FILE__, 2);
+
+    return $path ? $base_dir . DIRECTORY_SEPARATOR . $path : $base_dir;
 }
 
-function rootdir()
-{
-    return dirname(appdir());
-}
