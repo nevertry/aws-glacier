@@ -8,3 +8,4 @@ $greet = new Greet();
 
 $greet->hello();
 
+echo rootdir();
