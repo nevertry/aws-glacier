@@ -2,10 +2,14 @@
 
 require_once __DIR__ .'/vendor/autoload.php';
 
-use App\Playground\Sample\Greet;
+// load: phpdotenv
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
 
-$greet = new Greet();
-
+// load: Greet
+$greet = new App\Playground\Sample\Greet();
 $greet->hello();
 
+// run
 echo rootdir();
+echo getenv('AWS_REGION');

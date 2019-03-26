@@ -6,6 +6,10 @@
             "email": "hendy.yanuar@gmail.com"
         }
     ],
+    "require": {
+        "aws/aws-sdk-php": "^3.90",
+        "vlucas/phpdotenv": "^3.3"
+    },
     "autoload": {
         "files": [
             "app/helpers.php"
