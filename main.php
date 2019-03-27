@@ -12,4 +12,8 @@ $dotenv->load();
 
 // run
 // echo getenv('AWS_REGION');
-echo base_path('config/aws.php');
+// echo base_path('config/aws.php');
+
+// Backup
+$backup = new App\Playground\Files\Backup;
+$backup->describeVault();
