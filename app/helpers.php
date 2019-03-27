@@ -7,3 +7,7 @@ function base_path($path='')
     return $path ? $base_dir . DIRECTORY_SEPARATOR . $path : $base_dir;
 }
 
+function lf()
+{
+    return "\r\n";
+}

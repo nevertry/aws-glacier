@@ -1,0 +1,22 @@
+{
+    "location": "\/765897820407\/vaults\/jonas-clouds\/jobs\/L1CmZKgJ-X2sbMuzmOt7as48LxoV0sJc47eY0hsz4aKfdkANDL9Sx1_TUkY12feXapT8kSbIPsgE33iCsn42i6eu05ps",
+    "jobId": "L1CmZKgJ-X2sbMuzmOt7as48LxoV0sJc47eY0hsz4aKfdkANDL9Sx1_TUkY12feXapT8kSbIPsgE33iCsn42i6eu05ps",
+    "jobOutputPath": "",
+    "@metadata": {
+        "statusCode": 202,
+        "effectiveUri": "https:\/\/glacier.ap-southeast-1.amazonaws.com\/-\/vaults\/jonas-clouds\/jobs",
+        "headers": {
+            "x-amzn-requestid": "fUPl-5QVpvj93pIOZIHOM61bEGlL9BSy3kvOqmbW5dCpamY",
+            "location": "\/765897820407\/vaults\/jonas-clouds\/jobs\/L1CmZKgJ-X2sbMuzmOt7as48LxoV0sJc47eY0hsz4aKfdkANDL9Sx1_TUkY12feXapT8kSbIPsgE33iCsn42i6eu05ps",
+            "x-amz-job-id": "L1CmZKgJ-X2sbMuzmOt7as48LxoV0sJc47eY0hsz4aKfdkANDL9Sx1_TUkY12feXapT8kSbIPsgE33iCsn42i6eu05ps",
+            "content-type": "application\/json",
+            "content-length": "2",
+            "date": "Wed, 27 Mar 2019 10:02:16 GMT"
+        },
+        "transferStats": {
+            "http": [
+                []
+            ]
+        }
+    }
+}

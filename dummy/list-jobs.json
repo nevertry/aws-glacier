@@ -1,0 +1,31 @@
+{
+    "JobList": [
+        {
+            "JobId": "L1CmZKgJ-X2sbMuzmOt7as48LxoV0sJc47eY0hsz4aKfdkANDL9Sx1_TUkY12feXapT8kSbIPsgE33iCsn42i6eu05ps",
+            "JobDescription": "test-content",
+            "Action": "InventoryRetrieval",
+            "VaultARN": "arn:aws:glacier:ap-southeast-1:765897820407:vaults\/jonas-clouds",
+            "CreationDate": "2019-03-27T10:02:16.885Z",
+            "Completed": false,
+            "StatusCode": "InProgress",
+            "InventoryRetrievalParameters": {
+                "Format": "JSON"
+            }
+        }
+    ],
+    "@metadata": {
+        "statusCode": 200,
+        "effectiveUri": "https:\/\/glacier.ap-southeast-1.amazonaws.com\/-\/vaults\/jonas-clouds\/jobs",
+        "headers": {
+            "x-amzn-requestid": "M3Xe_A0bWI4Me0Mn4Xxp_HbFKAxn3lUjZjVmREdUTL6nsk8",
+            "content-type": "application\/json",
+            "content-length": "751",
+            "date": "Wed, 27 Mar 2019 10:02:16 GMT"
+        },
+        "transferStats": {
+            "http": [
+                []
+            ]
+        }
+    }
+}

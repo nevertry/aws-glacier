@@ -1,0 +1,23 @@
+{
+    "location": "\/765897820407\/vaults\/jonas-clouds\/archives\/uBy5Sgfnw1O0AHuJsjwpTFrKjbA5TQS_Ichn2d03CjxIQZeYmMvQ_A4WzORdIMOqeKRqBKMUejVbyX7yUt8TJJ4DsP4zwfH_2ByD07isyhQ-SmbumMvT-P8MvLaHL1jWM4nx5ZDJZg",
+    "checksum": "83e5de5555f47481834a99df3a9a771064a1575e108dd09becba5e6a3455c117",
+    "archiveId": "uBy5Sgfnw1O0AHuJsjwpTFrKjbA5TQS_Ichn2d03CjxIQZeYmMvQ_A4WzORdIMOqeKRqBKMUejVbyX7yUt8TJJ4DsP4zwfH_2ByD07isyhQ-SmbumMvT-P8MvLaHL1jWM4nx5ZDJZg",
+    "@metadata": {
+        "statusCode": 201,
+        "effectiveUri": "https:\/\/glacier.ap-southeast-1.amazonaws.com\/-\/vaults\/jonas-clouds\/archives",
+        "headers": {
+            "x-amzn-requestid": "iJHjX6b46LIeyIZl-WfFBHXS9F_tEceHumBOyKcd3YOXZCg",
+            "x-amz-sha256-tree-hash": "83e5de5555f47481834a99df3a9a771064a1575e108dd09becba5e6a3455c117",
+            "location": "\/765897820407\/vaults\/jonas-clouds\/archives\/uBy5Sgfnw1O0AHuJsjwpTFrKjbA5TQS_Ichn2d03CjxIQZeYmMvQ_A4WzORdIMOqeKRqBKMUejVbyX7yUt8TJJ4DsP4zwfH_2ByD07isyhQ-SmbumMvT-P8MvLaHL1jWM4nx5ZDJZg",
+            "x-amz-archive-id": "uBy5Sgfnw1O0AHuJsjwpTFrKjbA5TQS_Ichn2d03CjxIQZeYmMvQ_A4WzORdIMOqeKRqBKMUejVbyX7yUt8TJJ4DsP4zwfH_2ByD07isyhQ-SmbumMvT-P8MvLaHL1jWM4nx5ZDJZg",
+            "content-type": "application\/json",
+            "content-length": "2",
+            "date": "Wed, 27 Mar 2019 09:25:58 GMT"
+        },
+        "transferStats": {
+            "http": [
+                []
+            ]
+        }
+    }
+}

@@ -15,6 +15,9 @@ Class Backup {
 
     /**
      * Get Configuration from base path
+     * 
+     * @param string $configFile
+     * @return Array
      */
     private function getConfig($configFile = 'config/aws.php')
     {
@@ -22,51 +25,106 @@ Class Backup {
         return $this->config;
     }
 
-    public function listVault()
+    /**
+     * Set config manually
+     * 
+     * @param Array $configs
+     */
+    public function setConfig($configs)
     {
-        $command = $this->client->getCommand('ListVaults');
-        $request = \Aws\serialize($command);
-
-        var_dump($request);
-    }
-
-    public function listJobs()
-    {
-        $result = $this->client->listJobs(array('vaultName' => 'foo'));
-        $array = $result->get('JobList');
-        //Creates an array with metadata regarding your jobs
-        print_r($array);
-    }
-
-    public function describeVault()
-    {
-        $result = $this->client->describeVault([
-            'vaultName' => $this->config['vaultName'],
-        ]);
-
-        var_dump($result->__toString());
-
-        // $command = $this->client->getCommand('UploadArchive', [
-        //     'vaultName' => $this->config['vaultName'],
-        // ]);
-
-        // $request = \Aws\serialize($command);
-
-        // print_r($request);
+        $this->config = $configs;
     }
 
     /**
-     * test
+     * List Jobs
      */
-    public function test()
+    public function listJobs()
     {
-        $command = $this->client->getCommand('UploadArchive', [
-            'vaultName'  => 'foo',
-            'sourceFile' => __DIR__ . '/test-content.txt',
+        return $this->client->listJobs([
+            'vaultName' => $this->config['vaultName']
         ]);
+    }
+
+    /**
+     * Describe Vault
+     */
+    public function describeVault()
+    {
+        return $this->client->describeVault([
+            'vaultName' => $this->config['vaultName'],
+        ]);
+    }
+
+    /**
+     * Upload to vault and get archive ID.
+     * 
+     * @param string $filePath
+     */
+    public function upload($filePath)
+    {
+        $result = $this->client->uploadArchive([
+            'vaultName' => $this->config['vaultName'],
+            'sourceFile' => $filePath,
+        ]);
+
+        return $result;
+    }
+
+    /**
+     * Initiate job to get Inventory
+     * 
+     * @param string $description
+     */
+    public function getInventory($description='')
+    {
+        $result = $this->client->initiateJob([
+            'vaultName' => $this->config['vaultName'],
+            'jobParameters' => [
+                'Description' => $description,
+                'Type' => 'inventory-retrieval',
+            ],
+        ]);
+
+        return $result;
+    }
+
+    public function doListJobs()
+    {
+        $result = $this->client->listJobs([
+            'vaultName' => $this->config['vaultName'],
+        ]);
+
+        return $result;
+    }
+
+    /**
+     * Get job output by Job ID.
+     * 
+     * @param string $jobId
+     */
+    public function doGetJobOutput($jobId)
+    {
+        $result = $this->client->getJobOutput([
+            'vaultName' => $this->config['vaultName'],
+            'jobId' => $jobId,
+        ]);
+
+        return $result;
+    }
+
+    /**
+     * Send any glacier command with custom parameters.
+     * 
+     * @param string $commandName
+     * @param array (optional) $commandParamaters
+     * @return \Aws\serialize(\Aws\Result)
+     */
+    public function command($commandName, $commandParameters=[])
+    {
+        $command = $this->client->getCommand($commandName, $commandParameters);
 
         $request = \Aws\serialize($command);
 
-        print_r($request);
+        return $request;
     }
 }
